@@ -1,0 +1,22 @@
+local CombinedScript = ""
+
+local URLs = {
+    "https://raw.githubusercontent.com/OURZQ/UWS/refs/heads/main/UltimateWaypointSystem",
+    "https://raw.githubusercontent.com/OURZQ/ATT/refs/heads/main/AutoTotem",
+    "",
+    ""
+}
+
+for _, url in ipairs(URLs) do
+    local success, scriptContent = pcall(function()
+        return game:HttpGet(url)
+    end)
+    
+    if success then
+        CombinedScript = CombinedScript .. "\n\n-- New Script Loaded --\n" .. scriptContent
+    else
+        warn("Failed to fetch: " .. url)
+    end
+end
+
+loadstring(CombinedScript)()
