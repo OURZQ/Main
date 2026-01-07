@@ -1,20 +1,18 @@
-local CombinedScript = ""
-
-local URLs = {
+local Scripts = {
     "https://raw.githubusercontent.com/OURZQ/UWS/refs/heads/main/UltimateWaypointSystem",
-    "https://raw.githubusercontent.com/OURZQ/ATT/refs/heads/main/AutoTotem"
+    "https://raw.githubusercontent.com/OURZQ/ATT/refs/heads/main/AutoTotem",
+    "",
+    ""
 }
 
-for _, url in ipairs(URLs) do
-    local success, scriptContent = pcall(function()
-        return game:HttpGet(url)
+for _, url in ipairs(Scripts) do
+    local success, errorMsg = pcall(function()
+        loadstring(game:HttpGet(url))()
     end)
     
-    if success then
-        CombinedScript = CombinedScript .. "\n\n-- New Script Loaded --\n" .. scriptContent
-    else
-        warn("Failed to fetch: " .. url)
+    if not success then
+        warn("Failed to load script: " .. errorMsg)
     end
 end
 
-loadstring(CombinedScript)()
+print("✅ All scripts executed!")
