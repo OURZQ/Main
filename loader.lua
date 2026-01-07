@@ -1,18 +1,31 @@
-local Scripts = {
+local URLs = {
     "https://raw.githubusercontent.com/OURZQ/UWS/refs/heads/main/UltimateWaypointSystem",
-    "https://raw.githubusercontent.com/OURZQ/ATT/refs/heads/main/AutoTotem",
-    "",
-    ""
+    "https://raw.githubusercontent.com/OURZQ/ATT/refs/heads/main/AutoTotem", 
+    "https://raw.githubusercontent.com/AhmadV99/Script-Games/main/The%20Strongest%20Battleground.lua",
+    "https://raw.githubusercontent.com/AhmadV99/Script-Games/main/Pet%20GO.lua"
 }
 
-for _, url in ipairs(Scripts) do
-    local success, errorMsg = pcall(function()
-        loadstring(game:HttpGet(url))()
+print("🚀 Loading " .. #URLs .. " scripts...")
+
+for i, url in ipairs(URLs) do
+    local scriptName = url:match("/([^/]+)%.lua$") or "Script " .. i
+    print("📥 [" .. i .. "/" .. #URLs .. "] Loading: " .. scriptName)
+    
+    local success, result = pcall(function()
+        local code = game:HttpGet(url, true)
+        return loadstring(code)
     end)
     
-    if not success then
-        warn("Failed to load script: " .. errorMsg)
+    if success and result then
+        local execSuccess, execError = pcall(result)
+        if execSuccess then
+            print("✅ " .. scriptName .. " executed successfully")
+        else
+            warn("⚠️ " .. scriptName .. " execution error: " .. execError)
+        end
+    else
+        warn("❌ Failed to load: " .. scriptName)
     end
 end
 
-print("✅ All scripts executed!")
+print("🎉 All scripts loaded!")
