@@ -2,7 +2,7 @@ local URLs = {
     "https://raw.githubusercontent.com/OURZQ/UWS/refs/heads/main/UltimateWaypointSystem",
     "https://raw.githubusercontent.com/OURZQ/ATT/refs/heads/main/AutoTotem", 
     "https://raw.githubusercontent.com/OURZQ/ALG/refs/heads/main/AntiLag",
-    "",
+    "https://raw.githubusercontent.com/OURZQ/AFK/refs/heads/main/AntiAFK",
     "",
     "",
     "",
