@@ -1,8 +1,8 @@
 local URLs = {
     "https://raw.githubusercontent.com/OURZQ/UWS/refs/heads/main/UltimateWaypointSystem",
     "https://raw.githubusercontent.com/OURZQ/ATT/refs/heads/main/AutoTotem", 
-    "https://raw.githubusercontent.com/AhmadV99/Script-Games/main/The%20Strongest%20Battleground.lua",
-    "https://raw.githubusercontent.com/AhmadV99/Script-Games/main/Pet%20GO.lua"
+    "",
+    ""
 }
 
 print("🚀 Loading " .. #URLs .. " scripts...")
