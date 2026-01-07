@@ -2,6 +2,11 @@ local URLs = {
     "https://raw.githubusercontent.com/OURZQ/UWS/refs/heads/main/UltimateWaypointSystem",
     "https://raw.githubusercontent.com/OURZQ/ATT/refs/heads/main/AutoTotem", 
     "",
+    "",
+    "",
+    "",
+    "",
+    "",
     ""
 }
 
