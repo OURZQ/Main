@@ -10,7 +10,7 @@ local URLs = {
     ""
 }
 
-print("🚀 Loading " .. #URLs .. " scripts...")
+print(" Loading " .. #URLs .. " scripts...")
 
 for i, url in ipairs(URLs) do
     local scriptName = url:match("/([^/]+)%.lua$") or "Script " .. i
@@ -29,8 +29,8 @@ for i, url in ipairs(URLs) do
             warn("⚠️ " .. scriptName .. " execution error: " .. execError)
         end
     else
-        warn("❌ Failed to load: " .. scriptName)
+        warn("Failed to load: " .. scriptName)
     end
 end
 
-print("🎉 All scripts loaded!")
+print("All scripts loaded")
