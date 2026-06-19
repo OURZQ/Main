@@ -1,9 +1,9 @@
 local URLs = {
     "https://raw.githubusercontent.com/OURZQ/UWS/refs/heads/main/UltimateWaypointSystem",
     "https://raw.githubusercontent.com/OURZQ/UKP/refs/heads/main/UltimateKeyPress", 
-    "https://raw.githubusercontent.com/OURZQ/ALG/refs/heads/main/AntiLag",
-    "https://raw.githubusercontent.com/OURZQ/AFK/refs/heads/main/AntiAFK",
-    "https://raw.githubusercontent.com/OURZQ/RMF/refs/heads/main/RemoteFirer",
+    "",
+    "",
+    "",
     "",
     "",
     "",
